@@ -132,11 +132,12 @@ for ($i = 1; $i < 10; $i++) {
 
 //задание 8
 // Не принято
-echo 'задание 8' . "<br>";
-
 $str = "dkfg erbge;ak erjbvfgerjl";
-$z = strlen($str);
-$x = 0;
-while ($x++ < ($z - 1)) {
-    echo $str[$x] . "+";
+echo "$str";
+$array = explode(" ", $str);
+$i=0;
+while ($i < count($array)) {
+    $str_new .= $array[$i] . "+";
+    $i++;
 }
+echo "$str_new";
