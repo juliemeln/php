@@ -117,16 +117,18 @@ foreach ($cars as $key => $value) {
 // Не принято
 echo "<br>" . 'задание 7' . "<br>";
 
-for ($i = 1; $i < 10; $i++) {
-    for ($a = 1; $a < 10; $a++) {
-        if ($i % $a == 0) {
-            echo '(' . $i * $a . '  )';
-        } else {
-            echo '[' . $i * $a . '  ]';
-        }
+for ($i = 1; $i <= 10; $i++) {
+    for ($a = 1; $a <= 10; $a++) {
+         if (($i % 2 == 0)&&($a % 2 ==0)) {
+             echo '(' . $i * $a . '  )';
+         } elseif (($i % 2 != 0)&&($a % 2 != 0)){
+             echo '[' . $i * $a . '  ]';
+         } else {
+             echo $i * $a;
+         }
     }
-    if ($a = 9) {
-        echo '<br>';
+    if ($a = 10) {
+        echo "<br>";
     }
 }
 
