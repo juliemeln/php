@@ -50,13 +50,14 @@ function action($numbers,$action)
 echo action($numbers,$action);
 
 //задание 3
+
 function sum()
 {
-    if (gettype(func_get_arg(0))==string) {
+        echo gettype(func_get_arg(0));
+        if (is_string(gettype(func_get_arg(0))){
         $numbers = func_get_args();
-        $action=func_get_arg(0);
-        print_r($numbers);
-        $a=0;
+        $action=array_shift($numbers);
+        $a = 0;
         $count = count($numbers);
         echo $action;
         echo $count;
@@ -131,8 +132,7 @@ echo $str_new2."<br>";
 
 //задание 8
 
-$val = include "test.txt";
-echo $val;
+
 
 //задание 9
 function openFile() {
