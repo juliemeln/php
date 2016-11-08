@@ -83,7 +83,6 @@ function sum()
         echo $a;
     }
     return;
-
 };
 echo sum("*",2,5,5,5);
 
