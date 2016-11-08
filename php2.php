@@ -88,10 +88,21 @@ echo sum("*",2,5,5,5);
 
 //задание 4
 function func($x,$y){
+    
     if($x%2==0 & $y%2==0){
+        for ($i = 1; $i <= $x; $i++) {
+            echo'<table width="50%"><tr>';
+            for ($a = 1; $a <= $y; $a++) {
+                echo '<td>' . $i * $a . '</td>';
+            }
+        }
+        echo "</tr></table>";
     }
-}
-
+    else
+        return false;
+    }
+    
+echo func(2,2);
 
 //задание 5
 echo '<br>';
