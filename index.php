@@ -118,18 +118,18 @@ foreach ($cars as $key => $value) {
 echo "<br>" . 'задание 7' . "<br>";
 
 for ($i = 1; $i <= 10; $i++) {
+    echo'<table width="100%"><tr>';
+    
     for ($a = 1; $a <= 10; $a++) {
-         if (($i % 2 == 0)&&($a % 2 ==0)) {
-             echo '(' . $i * $a . '  )';
+         if (($i % 2 == 0)&&($a % 2 == 0)) {
+             echo '<td>' . '(' . $i * $a . ')' . '</td>';
          } elseif (($i % 2 != 0)&&($a % 2 != 0)){
-             echo '[' . $i * $a . '  ]';
+             echo '<td>' . '[' . $i * $a . ']' . '</td>';
          } else {
-             echo $i * $a;
+             echo '<td>' . $i * $a . '</td>';
          }
     }
-    if ($a = 10) {
-        echo "<br>";
-    }
+    echo "</tr></table>";
 }
 
 //задание 8
