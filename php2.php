@@ -14,7 +14,8 @@ function string($strings,$second)
     };
     return;
 };
-echo string($strings);
+echo string($strings,false);
+
 //задание 2
 
 $numbers=array(2,5,5,5);
@@ -87,9 +88,7 @@ echo sum("*",2,5,5,5);
 
 //задание 4
 function func($x,$y){
-
     if($x%2==0 & $y%2==0){
-
     }
 }
 
@@ -110,14 +109,10 @@ palindrom("uiiiooo oooiiiu");
 palindrom("ilglugv,jbhkyufljv");
 
 //задание 6
-ini_set('date.timezone', 'Russia/Moscow');
-$time1 = date('H:i:s',time());
-echo 'Сейчас:'. date('d-m-Y') ."\n";
-echo  $time1."<br>";
-
+echo date('d-m-Y H:i') .'<br>';
+echo  date('d.m.Y H:i:s', mktime(0, 0, 0, 2, 24, 2016));
 
 //задание 7
-
 $str="Карл у Клары украл Кораллы";
 $array = explode("К", $str);
 $i=0;
@@ -140,5 +135,15 @@ $val = include "test.txt";
 echo $val;
 
 //задание 9
+function openFile() {
+    $handler = fopen("test.txt", "r");
+    $contents = fread($handler, filesize("test.txt"));
+    echo $contents;
+}
 
+//задание 10
 
+$text = "Hello again!";
+$fp = fopen("anothertest.txt", "w");
+fwrite($fp, $text);
+fclose($fp);
