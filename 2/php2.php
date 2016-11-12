@@ -50,17 +50,15 @@ function action($numbers,$action)
 echo action($numbers,$action);
 
 //задание 3
-
 function sum()
 {
-        echo gettype(func_get_arg(0));
-        if (is_string(gettype(func_get_arg(0))){
+    echo gettype(func_get_arg(0));
+    if (is_string(gettype(func_get_arg(0)))){
         $numbers = func_get_args();
-        $action=array_shift($numbers);
-        $a = 0;
+        $action = array_shift($numbers);
+        $a = $numbers[0];
         $count = count($numbers);
         echo $action;
-        echo $count;
         for ($i = 1; $i < $count; $i++) {
             switch ($action) {
                 case '+':
