@@ -1,6 +1,9 @@
 <?php
-//задание 1
+// Не принято: 1, 2, 4, 5, 8
 
+//задание 1
+// Не принято
+// Не соответствует заданию
 $strings = array("apple", "flower", "hello", "world");
 
 function string($strings,$second)
@@ -17,6 +20,9 @@ function string($strings,$second)
 echo string($strings,false);
 
 //задание 2
+// Не принято
+// Для - неправильный результат
+// Для * и / всегда 0
 
 $numbers=array(2,5,5,5);
 $action='+';
@@ -50,6 +56,8 @@ function action($numbers,$action)
 echo action($numbers,$action);
 
 //задание 3
+// Принято
+// Здесь нет ошибки, допущенной во 2 задании
 function sum()
 {
     echo gettype(func_get_arg(0));
@@ -85,6 +93,8 @@ function sum()
 echo sum("*",2,5,5,5);
 
 //задание 4
+// Не принято
+// Нет вывода ошибки
 function func($x,$y){
     
     if($x%2==0 & $y%2==0){
@@ -103,6 +113,9 @@ function func($x,$y){
 echo func(2,2);
 
 //задание 5
+// Не принято
+// Не вырезаются пробелы
+// Не убирается значимость регистра
 echo '<br>';
 function palindrom($str){
     $c=strlen($str)-1;
@@ -118,10 +131,13 @@ palindrom("uiiiooo oooiiiu");
 palindrom("ilglugv,jbhkyufljv");
 
 //задание 6
+// Принято
 echo date('d-m-Y H:i') .'<br>';
 echo  date('d.m.Y H:i:s', mktime(0, 0, 0, 2, 24, 2016));
 
 //задание 7
+// Принято
+// Обязательно: переделать на использование функции замены подстроки
 $str="Карл у Клары украл Кораллы";
 $array = explode("К", $str);
 $i=0;
@@ -139,10 +155,11 @@ $str_new2 .= "Три " . $array2[1]." ". $array2[2];
 echo $str_new2."<br>";
 
 //задание 8
-
+// ????
 
 
 //задание 9
+// Принято
 function openFile() {
     $handler = fopen("test.txt", "r");
     $contents = fread($handler, filesize("test.txt"));
@@ -150,7 +167,7 @@ function openFile() {
 }
 
 //задание 10
-
+// Принято
 $text = "Hello again!";
 $fp = fopen("anothertest.txt", "w");
 fwrite($fp, $text);
