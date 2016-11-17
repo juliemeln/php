@@ -26,7 +26,10 @@
 // считываем данные из файла
 $xml = simplexml_load_file('data.xml');
 // проходимся по каждому item и выводим на экран
+echo "Номер заказа: ".$xml["PurchaseOrderNumber"]."  Дата заказа:". $xml["OrderDate"];
 
+
+//var_dump($xml);
 echo '<ul class="list">';
 echo '<li>'."Address".'</li>';
 echo '<li>'."Name".'</li>';
