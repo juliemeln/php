@@ -20,7 +20,7 @@ $movies = [
         "country" => "USA"
     ]
 ];
-print_r($movies);
+//print_r($movies);
 echo "<br>";
 
 $movies = json_encode($movies);
@@ -37,10 +37,33 @@ if($random == 0) {
     echo 'changes';
     $movies2["movie"]["02"]["year"]="2011";
 }
-print_r($movies2);
+//print_r($movies2);
 $movies2 = json_encode($movies2);
 file_put_contents("output2.json", $movies2);
 
+
+$m = json_decode($movies);
+$m2 = json_decode($movies2);
+
+//print_r($m);
+echo "</br>";
+
+//print_r($m2);
+
+function diffArr($arr,$arr2)
+{
+    $diff = array();
+    foreach ($arr as $key => $value) {
+        if (is_array($value)) {
+            $diff = array_diff_assoc($value, $arr2[$key]);
+        }
+
+    }
+    return $diff;
+
+}
+
+print_r(diffArr($m,$m2));
 
 
 
